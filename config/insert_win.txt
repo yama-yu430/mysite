@@ -1,0 +1,4 @@
+  <style>
+    .znc h1{border-bottom:solid 3px rgb(44,136,201);}.znc h2{border-bottom:solid 1px rgb(44,136,201);}.znc h3{display:inline-block;position:relative;}.znc h3::before{content:"";display:block;width:100%;height:1.3rem;background-color:rgba(44,136,201,.1);position:absolute;top:10px;left:10px;}.sidebar__static-links,.update-notification-bar{display:none!important;}.znc th,.znc td{padding:.5rem 1rem;}.znc code{background:rgba(68,125,194,.2);}.list-item-inner__title{font-family:monospace!important;}
+  </style>
+</head>
