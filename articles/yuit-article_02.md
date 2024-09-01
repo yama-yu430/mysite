@@ -28,8 +28,8 @@ IntelliJ IDEAをインストールする環境には以下が必要です。
 
   URLが出ない場合は以下からインスール
   https://www.oracle.com/jp/java/technologies/downloads/#java8-mac
-  ![altテキスト](/images/articles/1.png)
-  ![altテキスト](/images/articles/2.png)
+  ![altテキスト](/config/images/articles/1.png)
+  ![altテキスト](/config/images/articles/2.png)
 
 ## 1-2. sbtインストール(Homebrewを利用してインストールする方法)
   まずはターミナル（Terminal.app）を開く。
@@ -39,15 +39,15 @@ IntelliJ IDEAをインストールする環境には以下が必要です。
   掲載されているスクリプトをターミナルで実行することでHomebrewコマンドが利用できるようになる。
 
   https://brew.sh/ja/
-  ![altテキスト](/images/articles/5.png)
+  ![altテキスト](/config/images/articles/5.png)
 
 
-  #### 1. sbtをインストール
+  #### 1-2-1. sbtをインストール
   ターミナルで以下を実行
 
     brew install sbt
 
-  #### 2. Java環境変数の設定
+  #### 1-2-2. Java環境変数の設定
 
   ターミナルを開き以下の手順を実行
 
@@ -59,7 +59,7 @@ IntelliJ IDEAをインストールする環境には以下が必要です。
 
     vi ~/.bash_profile
 
-  #### 3. 環境変数を追加
+  #### 1-2-3. 環境変数を追加
 
   以下４行をコピペし、「esc　→　:wq」　で編集終了。
 
@@ -68,21 +68,21 @@ IntelliJ IDEAをインストールする環境には以下が必要です。
     PATH=$PATH:$JAVA_HOME/bin
     export PATH
 
-  #### 4. 有効化
+  #### 1-2-4. 有効化
 
     source ~/.bash_profile
-![altテキスト](/images/articles/6.png)
+![altテキスト](/config/images/articles/6.png)
 
-## 2-1. IntelliJ IDEA Community Editionインストール
+## 1-3. IntelliJ IDEA Community Editionインストール
 https://www.jetbrains.com/idea/download/?section=mac#section=mac
-![altテキスト](/images/articles/3.png)
+![altテキスト](/config/images/articles/3.png)
 
 自動でダウンロードが開始されない場合は「direct link」をクリックしてダウンロードを開始。
 
 ダウンロード出来たらファイルを開く
 
 「IntelliJ IDEA CE.app」のアイコンを 「Applications」 フォルダにドラッグしてインストールします。
-![altテキスト](/images/articles/4.png)
+![altテキスト](/config/images/articles/4.png)
 
 セットアップ
 
@@ -98,10 +98,10 @@ https://www.jetbrains.com/idea/download/?section=mac#section=mac
 
 環境構築はここまでで完了です。
 
-## 2-2. 動作確認
+# 2. 動作確認
 動作確認では、Scalaの開発環境を利用して確認します。
 
-  #### 1. ターミナルを開き以下のコマンドを実行する(Scalaのプロジェクトを作成する)
+  ## 2-1. ターミナルを開き以下のコマンドを実行する(Scalaのプロジェクトを作成する)
 
 
     sbt new scala/scala-seed.g8
@@ -112,7 +112,7 @@ https://www.jetbrains.com/idea/download/?section=mac#section=mac
 
   コマンドが完了すると「helloworld」ディレクトリが生成される。
 
-  #### 2. ScalaプロジェクトをIntelliJで開く(インポートする)
+  ## 2-2. ScalaプロジェクトをIntelliJで開く(インポートする)
 
   デスクトップからIntelliJを起動し、Openをクリック
 
@@ -120,15 +120,60 @@ https://www.jetbrains.com/idea/download/?section=mac#section=mac
 
   Not Empty Folder(上書きの確認)という表示が出てきますので、Yesをクリックするとプロジェクトが開く。
 
-  #### 3. プログラムをsbtシェルで実行してみる
+  ## 2-3. プログラムをsbtシェルで実行してみる
 
   プロジェクトが開いたら、左下の「sbt shell」をクリックしてsbt shellを開く。
 
   sbt shellで、以下を実行し、コンソールに「hello」と表示されれば成功。
 
     run com.example.HelloWorld
-  ![altテキスト](/images/articles/7.png)
+  ![altテキスト](/config/images/articles/7.png)
 
   動作確認はこれで完了です。
 
+# 3. GitHub連携
 
+intelliJでGitHubが利用出来るよう連携していきます。
+
+intelliJを再起動します。
+
+最初のプロジェクトを選択する画面で上部にある「Get from VCS」を選択する。
+
+![altテキスト](/config/images/articles/8.png)
+
+Version controlは「Git」を選択する。
+URLはGitHubサイトからコピぺする。
+
+![altテキスト](/config/images/articles/9.png)
+
+URLはGitHubの「Java」ブランチから取得します。 
+「<>Code」のタブを選択し、ブランチは「main」を選択します。
+緑色になっている「<>Code」をクリックし、「HTTPS」を選択します。
+以下の画面になったら、URLの右側のアイコンをクリックし、コピーします。
+intelliJに戻り、URLをペーストし、「Clone」をクリックする。
+
+![altテキスト](/config/images/articles/10.png)
+
+以下の画面になったら、「Use Token..」をクリックする。
+
+![altテキスト](/config/images/articles/11.png)
+
+TokenもGitHubサイトからコピペします。
+「Generate...」をクリックするとGitHubサイトへ移行します。
+
+![altテキスト](/config/images/articles/12.png)
+
+以下の画面に移行しない場合は、右上の自身のアカウント(丸いアイコン)をクリックし、Settingsを選択します。
+「Developer Settings」、「Personal access tokens」を選択する。
+画像のように設定が完了したら、「Create Github App」をクリックする。
+
+![altテキスト](/config/images/articles/13.png)
+
+以下の画面は一度閉じてしまうと確認が出来なくなるため、tokenはメモ帳などに控えておきましょう。
+青い箇所のtokenコードをコピーし、intelliJでペースト、「Login」します。
+
+![altテキスト](/config/images/articles/14.png)
+
+「Trust Project」をクリックすると完了となります。
+
+![altテキスト](/config/images/articles/15.png)
