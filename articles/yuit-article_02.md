@@ -1,179 +1,44 @@
 ---
-title: "環境構築"
+title: "Javaとは"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]
 published: true
 ---
-本カリキュラムでは、Java開発をする上での必要な環境を構築します。
-環境を構築し、Java開発をするための準備をしましょう。
+本カリキュラムは、Webエンジニアとしての基盤となっていく、Java言語の基礎知識を抽出したものになっております。
+Java言語は一般的にも幅広く使用されている言語であり、プログラミング言語を理解する基本となる為、他言語への結びつきも多い言語として好まれております。
 
-# 1. 環境構築
-* インストールする際の注意点
+# 1. 前提の概念
+1. 「java」とは
 
-IntelliJ IDEAをインストールする環境には以下が必要です。
+## 1-1. 「java」とは
+ITサービスやシステム、ソフトウェアを動かすのに必要な基盤(プラットフォーム)に依存しない特性が最も特徴的。
+つまり、Javaで開発されたプログラムは、どんなオペレーティングシステム上でも動作する言語。
 
-    macOS 10.11 or later
-    メモリ 2 GB以上の空き容量 (8 GB以上を推奨)
+Javaはオブジェクト指向と呼ばれる開発手法に基づいています。
 
+オブジェクト指向は、プログラムを「オブジェクト」と呼ばれる小さな部品に分割し、それらのオブジェクトが相互に連携して機能するように設計する方法です。
 
-## 1-1. 事前準備
-* jdkインルトール(JDK : Javaのコンパイルや実行に必要な基本ツール)
+この特徴により、Javaはコードの再利用性と保守性が高まります。オブジェクトは独立して開発・テストされるため、修正や変更が必要な場合でも影響範囲を限定しやすくなります。
+また、オブジェクト指向は現実世界のモデル化に近いため、プログラムの理解が容易になります。
 
-  まずはJDKがインストールがされているかどうか確認。
+# 2. javaで出来ること
+1. デスクトップアプリケーション
 
-  ターミナルで以下のコマンドを実行
+    ビジネスアプリケーションやツールなど
 
-      javac -version
+2. ウェブアプリケーション
 
-  URLが出ない場合は以下からインスール
-  https://www.oracle.com/jp/java/technologies/downloads/#java8-mac
-  ![altテキスト](/config/images/articles/1.png)
-  ![altテキスト](/config/images/articles/2.png)
+    動的なウェブページ
 
-## 1-2. sbtインストール(Homebrewを利用してインストールする方法)
-  まずはターミナル（Terminal.app）を開く。
+3. モバイルアプリケーション
 
-  Homebrewの公式サイトにアクセス。
+    スートフォンやタブレットなどのモバイルデバイスのアプリ
 
-  掲載されているスクリプトをターミナルで実行することでHomebrewコマンドが利用できるようになる。
+4. 組み込みシステム
 
-  https://brew.sh/ja/
-  ![altテキスト](/config/images/articles/5.png)
+    様な機器や家電製品、自動車、ネットワーク機器などに組み込まれるシステム
 
+5. クラウドアプリケーション
 
-  #### 1-2-1. sbtをインストール
-  ターミナルで以下を実行
-
-    brew install sbt
-
-  #### 1-2-2. Java環境変数の設定
-
-  ターミナルを開き以下の手順を実行
-
-  Javaインストール先を確認
-
-    /usr/libexec/java_home -V
-
-  Profileを編集
-
-    vi ~/.bash_profile
-
-  #### 1-2-3. 環境変数を追加
-
-  以下４行をコピペし、「esc　→　:wq」　で編集終了。
-
-    JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"
-    export JAVA_HOME
-    PATH=$PATH:$JAVA_HOME/bin
-    export PATH
-
-  #### 1-2-4. 有効化
-
-    source ~/.bash_profile
-![altテキスト](/config/images/articles/6.png)
-
-## 1-3. IntelliJ IDEA Community Editionインストール
-https://www.jetbrains.com/idea/download/?section=mac#section=mac
-![altテキスト](/config/images/articles/3.png)
-
-自動でダウンロードが開始されない場合は「direct link」をクリックしてダウンロードを開始。
-
-ダウンロード出来たらファイルを開く
-
-「IntelliJ IDEA CE.app」のアイコンを 「Applications」 フォルダにドラッグしてインストールします。
-![altテキスト](/config/images/articles/4.png)
-
-セットアップ
-
-初回起動時に「”IntelliJ IDEA CE.app”is an ~~~open it?」が表示された場合はopenをクリックし、起動を進める。
-
-次に「Import IntelliJ IDEA Settings From...」のポップアップが表示されたらOKをクリック
-
-初期インストールのツールの設定は無視してNextをクリック
-
-初期画面でプラグインを選択
-
-「Scala」プラグインのインストールをクリックし、「Start using IntelliJ IDEA」をクリックすれば完了。
-
-環境構築はここまでで完了です。
-
-# 2. 動作確認
-動作確認では、Scalaの開発環境を利用して確認します。
-
-  ## 2-1. ターミナルを開き以下のコマンドを実行する(Scalaのプロジェクトを作成する)
-
-
-    sbt new scala/scala-seed.g8
-
-  任意の名前を要求される為、入力する。(ここでは「helloworld」とする)
-
-    name [Scala Seed Project]: helloworld
-
-  コマンドが完了すると「helloworld」ディレクトリが生成される。
-
-  ## 2-2. ScalaプロジェクトをIntelliJで開く(インポートする)
-
-  デスクトップからIntelliJを起動し、Openをクリック
-
-  Scala環境で作成したディレクトリを選択し、次のインポート設定画面ではOKをクリック。
-
-  Not Empty Folder(上書きの確認)という表示が出てきますので、Yesをクリックするとプロジェクトが開く。
-
-  ## 2-3. プログラムをsbtシェルで実行してみる
-
-  プロジェクトが開いたら、左下の「sbt shell」をクリックしてsbt shellを開く。
-
-  sbt shellで、以下を実行し、コンソールに「hello」と表示されれば成功。
-
-    run com.example.HelloWorld
-  ![altテキスト](/config/images/articles/7.png)
-
-  動作確認はこれで完了です。
-
-# 3. GitHub連携
-
-intelliJでGitHubが利用出来るよう連携していきます。
-
-intelliJを再起動します。
-
-最初のプロジェクトを選択する画面で上部にある「Get from VCS」を選択する。
-
-![altテキスト](/config/images/articles/8.png)
-
-Version controlは「Git」を選択する。
-URLはGitHubサイトからコピぺする。
-
-![altテキスト](/config/images/articles/9.png)
-
-URLはGitHubの「Java」ブランチから取得します。 
-「<>Code」のタブを選択し、ブランチは「main」を選択します。
-緑色になっている「<>Code」をクリックし、「HTTPS」を選択します。
-以下の画面になったら、URLの右側のアイコンをクリックし、コピーします。
-intelliJに戻り、URLをペーストし、「Clone」をクリックする。
-
-![altテキスト](/config/images/articles/10.png)
-
-以下の画面になったら、「Use Token..」をクリックする。
-
-![altテキスト](/config/images/articles/11.png)
-
-TokenもGitHubサイトからコピペします。
-「Generate...」をクリックするとGitHubサイトへ移行します。
-
-![altテキスト](/config/images/articles/12.png)
-
-以下の画面に移行しない場合は、右上の自身のアカウント(丸いアイコン)をクリックし、Settingsを選択します。
-「Developer Settings」、「Personal access tokens」を選択する。
-画像のように設定が完了したら、「Create Github App」をクリックする。
-
-![altテキスト](/config/images/articles/13.png)
-
-以下の画面は一度閉じてしまうと確認が出来なくなるため、tokenはメモ帳などに控えておきましょう。
-青い箇所のtokenコードをコピーし、intelliJでペースト、「Login」します。
-
-![altテキスト](/config/images/articles/14.png)
-
-「Trust Project」をクリックすると完了となります。
-
-![altテキスト](/config/images/articles/15.png)
+    Amazon Web Services（AWS）、Google Cloud Platform（GCP）、Microsoft Azureなど
