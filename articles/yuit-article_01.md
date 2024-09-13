@@ -105,44 +105,11 @@ https://www.jetbrains.com/idea/download/?section=mac#section=mac
 
 初期画面でプラグインを選択
 
-「Scala」プラグインのインストールをクリックし、「Start using IntelliJ IDEA」をクリックすれば完了。
+「Start using IntelliJ IDEA」をクリックすれば完了。
 
 環境構築はここまでで完了です。
 
-# 2. 動作確認
-動作確認では、Scalaの開発環境を利用して確認します。
-
-## 2-1. ターミナル/コマンドプロンプトを開き以下のコマンドを実行する(Scalaのプロジェクトを作成する)
-
-
-    sbt new scala/scala-seed.g8
-
-任意の名前を要求される為、入力する。(ここでは「helloworld」とする)
-
-    name [Scala Seed Project]: helloworld
-
-コマンドが完了すると「helloworld」ディレクトリが生成される。
-
-## 2-2. ScalaプロジェクトをIntelliJで開く(インポートする)
-
-デスクトップからIntelliJを起動し、Openをクリック
-
-Scala環境で作成したディレクトリを選択し、次のインポート設定画面ではOKをクリック。
-
-Not Empty Folder(上書きの確認)という表示が出てきますので、Yesをクリックするとプロジェクトが開く。
-
-## 2-3. プログラムをsbtシェルで実行してみる
-
-プロジェクトが開いたら、左下の「sbt shell」をクリックしてsbt shellを開く。
-
-sbt shellで、以下を実行し、コンソールに「hello」と表示されれば成功。
-
-    run com.example.HelloWorld
-![altテキスト](/images/articles/7.png)
-
-動作確認はこれで完了です。
-
-# 3. GitHub連携(clone)
+# 2. GitHub連携(clone)
 
 intelliJでGitHubが利用出来るよう連携していきます。
 
@@ -189,9 +156,9 @@ TokenもGitHubサイトからコピペします。
 
 ![altテキスト](/images/articles/15.png)
 
-# 4. 課題提出方法
+# 3. 課題提出方法
 
-## 4-1 IntelliJでレポジトリを切る
+## 3-1 IntelliJでレポジトリを切る
 
 IntelliJ左下のブランチマークをクリックする。
 「main」を右クリック、「New Branch form 'main'...」をクリックして、ブランチ名を記入して「Creat」で完了。
@@ -199,7 +166,7 @@ IntelliJ左下のブランチマークをクリックする。
 ![altテキスト](/images/articles/22.png)
 ![altテキスト](/images/articles/23.png)
 
-## 4-3 IntelliJでファイルを作成する(課題作成)
+## 3-3 IntelliJでファイルを作成する(課題作成)
 
 `Java/src`で右クリックし、New/Fileをクリックする。
 ![altテキスト](/images/articles/17.png)
@@ -210,7 +177,7 @@ IntelliJ左下のブランチマークをクリックする。
 「Add」をクリックするとファイルが作成されます。
 ![altテキスト](/images/articles/19.png)
 
-## 4-4 IntelliJで作成したソースの動作確認
+## 3-4 IntelliJで作成したソースの動作確認
 
 `Java/src`で右クリックし、「Mark Directory as」をクリックし、「Sources Root」をクリックすると作成したソースにrun(再生マーク)のアイコンが表示されます。
 ![altテキスト](/images/articles/20.png)
@@ -220,7 +187,7 @@ Runのマークをクリックすることでソースの処理を確認する�
 
 また、画面下の箇所に処理のログが表示され、処理に不備がある場合はエラーも表示されます。
 
-## 4-5 IntelliJでCommit、Pushする(課題提出)
+## 3-5 IntelliJでCommit、Pushする(課題提出)
 
 IntelliJの左側で「commit」を選択する。
 作成した提出用のソースにチェックを入れ、「Commit」をクリックする。
