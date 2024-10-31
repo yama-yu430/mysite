@@ -1,13 +1,10 @@
 ---
-title: "Spring Boot
-"
+title: "Spring Boot"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]
 published: true
 ---
-本カリキュラムでは、Java開発をする上での必要な環境を構築します。
-環境を構築し、Java開発をするための準備をしましょう。
 
 # 1. Spring Boot
 Spring Bootとは、Spring Frameworkとも呼ばれ、「フレームワーク」の一種でJavaやKotlinを使ったアプリケーション開発に使用されるツールです。
@@ -86,3 +83,57 @@ DemoApplication.java　を実行し、SpringBootを起動させる
 画面での確認が出来たら、intelliJに戻り、実行を停止する
 
 ![altテキスト](/images/articles/38.png)
+
+## 1-2. SpringBoot使用方法
+
+SpringBootをインストールするとライブラリにあらゆるjarファイルが追加されます。
+それらをソースコード内でimportすることにアノテーション「@」が使用出来るようになります。
+
+※　jarファイルとは「Java Archive」ファイルの略称で、Java開発で利用するファイルをまとめて保管しているファイル
+
+使用方法としてはシンプルで、あらかじめ決められた文字列の先頭に「@」を記載するだけです。
+使用できる便利な機能などはここでは簡単しか説明しないですが、ネットで調べると出でくるので気になる方は調べてみてください
+
+
+クラスのフィールドに付与することで、使いたいオブジェクトをインスタンス化し、変数に設定してくれるアノテーション。
+これにより、毎回newでインスタンス生成をせずにインスタンス(またはオブジェクト)を使用できるようになる。
+```
+@Autowired
+```
+
+@Autowiredとセットで使うアノテーション。
+クラス定義の前に記載することで@Autowiredが使用できるようになる。
+```
+@Component
+```
+
+@Autowiredへ生成したインスタンスを渡すために、別の領域へ登録するアノテーション。
+```
+@Bean
+```
+
+@Beanとセットで使用するアノテーション。
+クラス定義の前に記載することで@beanの登録ができるようになる。
+```
+@Configuration
+
+```
+
+Spring Bootの一般的なコントローラーとしてクラスを利用できるようにする。Thymeleafを利用する場合は＠RestControllerを利用する
+```
+@Controller
+```
+
+指定したパスにアクセスがあったときに、付与したメソッドを実行する
+```
+@RequestMapping("パス")
+```
+
+![altテキスト](/images/articles/46.png)
+
+オーバライドをチェックする
+```
+@Override
+```
+
+![altテキスト](/images/articles/47.png)
