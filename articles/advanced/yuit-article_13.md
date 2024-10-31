@@ -5,8 +5,6 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]
 published: true
 ---
-本カリキュラムでは、Java開発をする上での必要な環境を構築します。
-環境を構築し、Java開発をするための準備をしましょう。
 
 # 1. Maven
 
@@ -154,8 +152,25 @@ Pom.xml
 
 記載内容についてはタグの内容を確認するれば、およその検討はつくと思うので概要を把握する程度で良いです
 
+#### Pom.xml記載方法
+設定を記載する際はソースの始まりに 「project」 タグを記述します
+
+その中には、少なくとも以下の次の４つのタグを記述する必要があります
+```
+<modelVersion>
+<groupId>
+<artifactId>
+<version>
+```
+「modelVersion」はPOMのバージョンであり、基本的に変わらない為、雛形としてそのまま記載する。
+
+```
+<modelVersion>4.0.0</modelVersion>
+```
+
 大元(親)の設定
 ```
+<!-- 親の設定 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -165,12 +180,14 @@ Pom.xml
 ```
 基本的に「parent」タグ内に記載されている内容は変更、追加、削除はしません
 
+「groupId」、「artifactId」、「version」の３つは、プロジェクトを一意に識別するための情報です。
+
 パッケージのID
 ```
 <groupId> ... </groupId>
 <artifactId> ... </artifactId>
 ```
-ここでは「springframework」のパッケージ設定がされており、それに関する機能が利用できるようになっています
+ここではSpringが提供している「springframework」のパッケージ設定がされており、それに関する機能が利用できるようになっています
 
 「groupId」パッケージ、「artifactId」設定対象の詳細といったイメージです。
 
@@ -179,6 +196,11 @@ Pom.xml
 <version> ... </version>
 ```
 バージョンによって設定されている機能の制限がある為、状況に応じて数値を変更させます
+開発中のバージョンには末尾に「-SNAPSHOT」のプレフィックスがつく。
+
+```
+<version>1.0.0-SNAPSHOT</version>
+```
 
 パスの設定
 ```
@@ -187,6 +209,7 @@ Pom.xml
 
 依存関係の設定
 ```
+<!-- 依存関係 -->
 <dependencies>
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -224,11 +247,26 @@ dependencies：spring-boot-starter-web //springbootのweb起動の設定
 ```
 <plugins> ... </plugins>
 ```
-拡張機能の設定です
+拡張機能の設定です。
+
+コメント
+```
+<!-- comment -->
+```
+コメントを記載する際には上記のように記載します。
+
+変数
+
+```
+${ ... }
+
+${project.groupId}
+```
+紹介した画像にはないですが、Pom.xmlでも変数の記載が可能です。「${}」内に利用したい値のパスを「.」で連結して記載します。
 
 現場によって設定されている内容は異なる為、現場での仕様書や指示にしたがってください。
 
-そのため詳細な内容については割愛します
+そのため詳細な内容については割愛します。
 
 以上がPom.xmlの概要です。
 

@@ -6,8 +6,6 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]
 published: true
 ---
-本カリキュラムでは、Java開発をする上での必要な環境を構築します。
-環境を構築し、Java開発をするための準備をしましょう。
 
 # 1. WebApplication
 
