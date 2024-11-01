@@ -17,4 +17,4 @@ cd %dirpath%
 copy /Y config\images\favicon.png node_modules\zenn-cli\dist\client\favicon.png
 copy /Y config\images\logo.svg node_modules\zenn-cli\dist\client\logo.svg
 
-start npx zenn preview --port 8020 --open
+start npx zenn preview --port 8010 --open

@@ -20,4 +20,4 @@ cp -f config/images/favicon.png node_modules/zenn-cli/dist/client/favicon.png
 cp -f config/images/logo.svg node_modules/zenn-cli/dist/client/logo.svg
 
 # ZennCLI起動
-npx zenn preview --port 8020 --open
+npx zenn preview --port 8010 --open
