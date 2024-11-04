@@ -123,7 +123,7 @@ num[1] = new int[3];
 ```
 イメージとしては以下の画像を確認して下さい。
 
-![altテキスト](/images/articles/27.png)
+![altテキスト](/images/articles/yuit-article_05/27.png)
 
 上記のように2つの配列の中に3つの配列が存在してる状態が多次元配列となります。
 

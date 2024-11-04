@@ -24,7 +24,7 @@ WEBアプリケーション開発のプログラムで利用されるAPIなど
 ・WEBシステム
 WEBサイトやWEBアプリケーション、WEBサービスを提供される仕組み
 
-  ![altテキスト](/images/articles/44.png)
+  ![altテキスト](/images/articles/yuit-article_17/44.png)
 
 
 ## 1-2. MVCモデル
@@ -47,6 +47,6 @@ MVCモデルを採択するメリットとしては、各要素毎で個別に�
 これまでの開発では、複雑かつ大規模なソースに対しての改修や機能追加をする際に、他の要素への影響が起きたり、
 エラーを原因を特定するのに時間がかかるなどの問題が容易に対応出来るようになりました。
 
-![altテキスト](/images/articles/45.png)
+![altテキスト](/images/articles/yuit-article_17/45.png)
 
 

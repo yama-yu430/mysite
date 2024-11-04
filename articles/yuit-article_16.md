@@ -30,7 +30,7 @@ WEBアプリからREST-API、バッチ機能まで幅広く利用できるフレ
 
 「GENERATE」をクリックしてダウンロード開始
 
-  ![altテキスト](/images/articles/30.png)
+  ![altテキスト](/images/articles/yuit-article_16/30.png)
 
 ダウンロードが完了したら、zipファイルを解凍して展開する
 
@@ -42,11 +42,11 @@ IntelliJを起動する
 
 メニューから「開く」をクリックして、ダウンロードした「demoフォルダ」を開く
 
-![altテキスト](/images/articles/31.png)
+![altテキスト](/images/articles/yuit-article_16/31.png)
 
 「New Window」で新しくウィンドウを開く
 
-![altテキスト](/images/articles/32.png)
+![altテキスト](/images/articles/yuit-article_16/32.png)
 
 ＊右下にローディング中の表示が出ると思うので終わるまでは待機してくだい
 
@@ -59,30 +59,30 @@ DemoApplication.java
 
 エラーが発生している場合は、SpringBoot Initializerでの設定が出来てないか、intelliJでダウンロード出来てない可能性があるため、 再起動、再ビルド、フォルダ削除してやり直してみるなどの対応をしてみてください
 
-![altテキスト](/images/articles/33.png)
+![altテキスト](/images/articles/yuit-article_16/33.png)
 
 ## 1-2. 動作確認
 
 DemoApplication.java　を実行し、SpringBootを起動させる
 
-![altテキスト](/images/articles/34.png)
+![altテキスト](/images/articles/yuit-article_16/34.png)
 
 起動後、コンソール上に「Spring」の表示がされ、その後ログが9行程出力されます
 「Started DemoApplication ~~」が表示されていることを確認してください
 
-![altテキスト](/images/articles/35.png)
+![altテキスト](/images/articles/yuit-article_16/35.png)
 
 起動が確認出来たら、ブラウザで以下のURLを検索
 
-![altテキスト](/images/articles/36.png)
+![altテキスト](/images/articles/yuit-article_16/36.png)
 
 ページが表示され、「Whitelabel Error Page」が表示されれば、正常起動となります
 
-![altテキスト](/images/articles/37.png)
+![altテキスト](/images/articles/yuit-article_16/37.png)
 
 画面での確認が出来たら、intelliJに戻り、実行を停止する
 
-![altテキスト](/images/articles/38.png)
+![altテキスト](/images/articles/yuit-article_16/38.png)
 
 ## 1-2. SpringBoot使用方法
 
@@ -129,11 +129,7 @@ Spring Bootの一般的なコントローラーとしてクラスを利用でき
 @RequestMapping("パス")
 ```
 
-![altテキスト](/images/articles/46.png)
-
 オーバライドをチェックする
 ```
 @Override
 ```
-
-![altテキスト](/images/articles/47.png)

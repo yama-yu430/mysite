@@ -32,9 +32,9 @@ IntelliJ IDEAをインストールする環境には以下が必要です。
   以下からJDKをインストールする
   https://www.oracle.com/jp/java/technologies/downloads/#java8-mac
   windows...windowsタブをクリックして「x64 Installer」のURLでダウンロード
-  ![altテキスト](/images/articles/1.png)
+  ![altテキスト](/images/articles/yuit-article_01/1.png)
   mac...macタブをクリックして「x64 DMG Installer」のURLでダウンロード
-  ![altテキスト](/images/articles/2.png)
+  ![altテキスト](/images/articles/yuit-article_01//2.png)
 
 ## 1-2. sbtインストール(Homebrewを利用してインストールする方法)
 WindowsはHomebrewのインストール不要。
@@ -46,7 +46,7 @@ Homebrewの公式サイトにアクセス。
 掲載されているスクリプトをターミナルで実行することでHomebrewコマンドが利用できるようになる。
 
 https://brew.sh/ja/
-![altテキスト](/images/articles/5.png)
+![altテキスト](/images/articles/yuit-article_01//5.png)
 
 
 #### 1-2-1. sbtをインストール
@@ -78,7 +78,7 @@ Profileを編集
 #### 1-2-4. 有効化
 
     source ~/.bash_profile
-![altテキスト](/images/articles/6.png)
+![altテキスト](/images/articles/yuit-article_01/6.png)
 
 ## 1-3. IntelliJ IDEA Community Editionインストール
 
@@ -86,14 +86,14 @@ Profileを編集
 macOSまたはWindowsのタブを選択し、Downloadをクリック。
 
 https://www.jetbrains.com/idea/download/?section=mac#section=mac
-![altテキスト](/images/articles/3.png)
+![altテキスト](/images/articles/yuit-article_01/3.png)
 
 自動でダウンロードが開始されない場合は「direct link」をクリックしてダウンロードを開始。
 
 ダウンロード出来たらファイルを開く
 
 「IntelliJ IDEA CE.app」のアイコンを 「Applications」 フォルダにドラッグしてインストールします。
-![altテキスト](/images/articles/4.png)
+![altテキスト](/images/articles/yuit-article_01/4.png)
 
 セットアップ
 
@@ -117,12 +117,12 @@ intelliJを再起動します。
 
 最初のプロジェクトを選択する画面で上部にある「Get from VCS」を選択する。
 
-![altテキスト](/images/articles/8.png)
+![altテキスト](/images/articles/yuit-article_01/8.png)
 
 Version controlは「Git」を選択する。
 URLはGitHubサイトからコピぺする。
 
-![altテキスト](/images/articles/9.png)
+![altテキスト](/images/articles/yuit-article_01/9.png)
 
 URLはGitHubの「Java」ブランチから取得します。
 「<>Code」のタブを選択し、ブランチは「main」を選択します。
@@ -130,31 +130,31 @@ URLはGitHubの「Java」ブランチから取得します。
 以下の画面になったら、URLの右側のアイコンをクリックし、コピーします。
 intelliJに戻り、URLをペーストし、「Clone」をクリックする。
 
-![altテキスト](/images/articles/10.png)
+![altテキスト](/images/articles/yuit-article_01/10.png)
 
 以下の画面になったら、「Use Token..」をクリックする。
 
-![altテキスト](/images/articles/11.png)
+![altテキスト](/images/articles/yuit-article_01/11.png)
 
 TokenもGitHubサイトからコピペします。
 「Generate...」をクリックするとGitHubサイトへ移行します。
 
-![altテキスト](/images/articles/12.png)
+![altテキスト](/images/articles/yuit-article_01/12.png)
 
 以下の画面に移行しない場合は、右上の自身のアカウント(丸いアイコン)をクリックし、Settingsを選択します。
 「Developer Settings」、「Personal access tokens」を選択する。
 画像のように設定が完了したら、「Create Github App」をクリックする。
 
-![altテキスト](/images/articles/13.png)
+![altテキスト](/images/articles/yuit-article_01/13.png)
 
 以下の画面は一度閉じてしまうと確認が出来なくなるため、tokenはメモ帳などに控えておきましょう。
 青い箇所のtokenコードをコピーし、intelliJでペースト、「Login」します。
 
-![altテキスト](/images/articles/14.png)
+![altテキスト](/images/articles/yuit-article_01/14.png)
 
 「Trust Project」をクリックすると完了となります。
 
-![altテキスト](/images/articles/15.png)
+![altテキスト](/images/articles/yuit-article_01/15.png)
 
 # 3. 課題提出方法
 
@@ -163,27 +163,27 @@ TokenもGitHubサイトからコピペします。
 IntelliJ左下のブランチマークをクリックする。
 「main」を右クリック、「New Branch form 'main'...」をクリックして、ブランチ名を記入して「Creat」で完了。
 
-![altテキスト](/images/articles/22.png)
-![altテキスト](/images/articles/23.png)
+![altテキスト](/images/articles/yuit-article_01/22.png)
+![altテキスト](/images/articles/yuit-article_01/23.png)
 
 ## 3-3 IntelliJでファイルを作成する(課題作成)
 
 `Java/src`で右クリックし、New/Fileをクリックする。
-![altテキスト](/images/articles/17.png)
+![altテキスト](/images/articles/yuit-article_01/17.png)
 
 ファイル名を記入する。
-![altテキスト](/images/articles/18.png)
+![altテキスト](/images/articles/yuit-article_01/18.png)
 
 「Add」をクリックするとファイルが作成されます。
-![altテキスト](/images/articles/19.png)
+![altテキスト](/images/articles/yuit-article_01/19.png)
 
 ## 3-4 IntelliJで作成したソースの動作確認
 
 `Java/src`で右クリックし、「Mark Directory as」をクリックし、「Sources Root」をクリックすると作成したソースにrun(再生マーク)のアイコンが表示されます。
-![altテキスト](/images/articles/20.png)
+![altテキスト](/images/articles/yuit-article_01/20.png)
 
 Runのマークをクリックすることでソースの処理を確認することが出来ます。
-![altテキスト](/images/articles/21.png)
+![altテキスト](/images/articles/yuit-article_01/21.png)
 
 また、画面下の箇所に処理のログが表示され、処理に不備がある場合はエラーも表示されます。
 
@@ -192,15 +192,15 @@ Runのマークをクリックすることでソースの処理を確認する�
 IntelliJの左側で「commit」を選択する。
 作成した提出用のソースにチェックを入れ、「Commit」をクリックする。
 
-![altテキスト](/images/articles/24.png)
+![altテキスト](/images/articles/yuit-article_01/24.png)
 
 windowsでは左上のメニュー(4本線のアイコン)を選択し、「Git」をクリック、「Push」を選択する。
 
-![altテキスト](/images/articles/25.png)
+![altテキスト](/images/articles/yuit-article_01/25.png)
 
 この画面で余計なファイルが入ってないか確認し、Pushをクリックで提出完了です。
 
-![altテキスト](/images/articles/26.png)
+![altテキスト](/images/articles/yuit-article_01/26.png)
 
 
 
