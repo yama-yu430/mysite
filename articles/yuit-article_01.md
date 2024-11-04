@@ -1,5 +1,5 @@
 ---
-title: "環境構築"
+title: "01_環境構築"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

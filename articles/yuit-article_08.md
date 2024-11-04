@@ -1,6 +1,6 @@
 ---
-title: "カプセル化"
-emoji: "📑"
+title: "08_カプセル化"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

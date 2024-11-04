@@ -1,6 +1,5 @@
 ---
-title: "Spring Boot
-"
+title: "17_WebApplication"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

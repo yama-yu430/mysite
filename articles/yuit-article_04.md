@@ -1,5 +1,5 @@
 ---
-title: "算術演算子"
+title: "04_算術演算子"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

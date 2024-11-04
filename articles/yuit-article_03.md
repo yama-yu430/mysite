@@ -1,5 +1,5 @@
 ---
-title: "Java基礎文法"
+title: "03_Java基礎文法"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

@@ -1,6 +1,6 @@
 ---
-title: "パッケージ"
-emoji: "📑"
+title: "10_パッケージ"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

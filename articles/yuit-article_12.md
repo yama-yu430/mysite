@@ -1,6 +1,6 @@
 ---
-title: "正規表現"
-emoji: "📑"
+title: "12_正規表現"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

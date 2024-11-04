@@ -1,5 +1,5 @@
 ---
-title: "Java前提の概念"
+title: "02_Java前提の概念"
 emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

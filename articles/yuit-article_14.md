@@ -1,6 +1,6 @@
 ---
-title: "JUnit"
-emoji: "📑"
+title: "14_JUnit"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

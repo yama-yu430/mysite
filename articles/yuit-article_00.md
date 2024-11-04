@@ -1,5 +1,5 @@
 ---
-title: "01_導入前確認事項"
+title: "00_導入前確認事項"
 emoji: "📔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [introduction]

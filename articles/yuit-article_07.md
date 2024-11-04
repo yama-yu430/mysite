@@ -1,6 +1,6 @@
 ---
-title: "例外処理"
-emoji: "📑"
+title: "07_例外処理"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

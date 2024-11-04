@@ -1,6 +1,6 @@
 ---
-title: "条件分岐"
-emoji: "📑"
+title: "06_条件分岐"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true

@@ -1,6 +1,6 @@
 ---
-title: "継承"
-emoji: "📑"
+title: "09_継承"
+emoji: "🖥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["programming"]
 published: true
